@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     Public function index(){
-        echo "Hi! Welcome To Laravel";
+        return ('\nHome');
     }
 }

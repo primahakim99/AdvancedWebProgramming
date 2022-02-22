@@ -36,6 +36,51 @@ use App\Http\Controllers\ArticleController;
 // Route::get('/about', [PageController::class, 'about']);
 // Route::get('/articles/{id}', [PageController::class, 'articles']);
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [AboutController::class, 'about']);
-Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/about', [AboutController::class, 'about']);
+// Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+
+//Practicum 3
+Route::get('/', function () {
+    return view ('home');
+});
+
+Route::prefix('products')->group(function () {
+    Route::get('/marbel-edu-games', function () {
+        return view ('category.1');
+    });
+    Route::get('/marbel-and-friends-kids-games', function () {
+        return view ('category.2');
+    });
+    Route::get('/riri-story-books', function () {
+        return view ('category.3');
+    });
+    Route::get('/kolak-kids-songs', function () {
+        return view ('category.4');
+    });
+});
+
+Route::prefix('news')->group(function () {
+    Route::get('/', function () {
+        return view ('news');
+    });
+    Route::get('/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19', function () {
+        return view ('news1');
+    });
+});
+
+Route::prefix('program')->group(function () {
+    Route::get('/karir', function () {
+        return view ('program.1');
+    });
+    Route::get('/magang', function () {
+        return view ('program.2');
+    });
+    Route::get('/kunjungan-industri', function () {
+        return view ('program.3');
+    });
+});
+
+Route::get('/about-us', function () {
+    return view ('about');
+});
