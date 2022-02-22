@@ -62,10 +62,10 @@ Route::prefix('products')->group(function () {
 
 Route::prefix('news')->group(function () {
     Route::get('/', function () {
-        return view ('news');
+        return view ('news.main');
     });
     Route::get('/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19', function () {
-        return view ('news1');
+        return view ('news.1');
     });
 });
 
