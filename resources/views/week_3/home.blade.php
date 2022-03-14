@@ -233,7 +233,7 @@
                         <div class="blog-view-box">
                             <div class="media">
                                 <div class="media-left">
-                                    <img src="{{ $bs1->iamge }}" class="media-object">
+                                    <img src="{{ $bs1->image }}" class="media-object">
                                 </div>
                                 <div class="media-body">
                                     <h3 class="media-heading blog-title">{{ $bs1->title }}</h3>
@@ -249,7 +249,7 @@
                         <div class="blog-view-box">
                             <div class="media">
                                 <div class="media-left">
-                                    <img src="{{ $bs2->iamge }}" class="media-object">
+                                    <img src="{{ $bs2->image }}" class="media-object">
                                 </div>
                                 <div class="media-body">
                                     <h3 class="media-heading blog-title">{{ $bs2->title }}</h3>
