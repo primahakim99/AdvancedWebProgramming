@@ -142,15 +142,15 @@
                 <div class="side-A">
                     <div class="product-thumb">
                         <div class="image">
-                            <a><img src="assets/images/category1.png" class="img-responsive" alt="image"></a>
+                            <a><img src="{{ $ro1->image }}" class="img-responsive" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="side-B">
                     <div class="product-desc-side">
-                        <h3><a>luxury spa</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nunc lorem nulla, ornare eu felis luctus non maximus vitae, portt neque. ipsum dolor sit amet, consec adipiscing elit.</p>
-                        <div class="links"><a href="single-blog.html">Read more</a></div>
+                        <h3><a href="/home/resort-overview/{{ $ro1->slug }}">{{ $ro1->title }}</a></h3>
+                        {!! $ro1->excerpt !!}
+                        <div class="links"><a href="/home/resort-overview/{{ $ro1->slug }}">Read more</a></div>
                     </div>
                 </div>
             </div>
@@ -159,15 +159,15 @@
                 <div class="side-A">
                     <div class="product-thumb">
                         <div class="image">
-                            <a><img alt="image" class="img-responsive" src="assets/images/category2.png"></a>
+                            <a><img alt="image" class="img-responsive" src="{{ $ro2->image }}"></a>
                         </div>
                     </div>
                 </div>
                 <div class="side-B">
                     <div class="product-desc-side">
-                        <h3><a>Beatusish ingl</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nunc lorem nulla, ornare eu felis luctus non maximus vitae, portt neque. ipsum dolor sit amet, consec adipiscing elit.</p>
-                        <div class="links"><a href="single-blog.html">Read more</a></div>
+                        <h3><a href="home/resort-overview/{{ $ro2->slug }}">{{ $ro2->title }}</a></h3>
+                        {!! $ro2->excerpt !!}
+                        <div class="links"><a href="home/resort-overview/{{ $ro2->slug }}">Read more</a></div>
                     </div>
                 </div>
             </div>
@@ -175,16 +175,16 @@
             <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
                 <div class="side-A">
                     <div class="product-desc-side">
-                        <h3><a>luxury room</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nunc lorem nulla, ornare eu felis luctus non maximus vitae, portt neque. ipsum dolor sit amet, consec adipiscing elit.</p>
-                        <div class="links"><a href="single-blog.html">Read more</a></div>
+                        <h3><a href="home/resort-overview/{{ $ro3->slug }}">{{ $ro3->title }}</a></h3>
+                        {!! $ro3->excerpt !!}
+                        <div class="links"><a href="home/resort-overview/{{ $ro3->slug }}">Read more</a></div>
                     </div>
                 </div>
 
                 <div class="side-B">
                     <div class="product-thumb">
                         <div class="image txt-rgt">
-                            <a class="arrow-left"><img src="assets/images/category3.png" class="img-responsive" alt="imaga"></a>
+                            <a class="arrow-left"><img src="{{ $ro3->image }}" class="img-responsive" alt="imaga"></a>
                         </div>
                     </div>
                 </div>
@@ -193,16 +193,16 @@
             <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
                 <div class="side-A">
                     <div class="product-desc-side">
-                        <h3><a>heaven seanery</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nunc lorem nulla, ornare eu felis luctus non maximus vitae, portt neque. ipsum dolor sit amet, consec adipiscing elit.</p>
-                        <div class="links"><a href="single-blog.html">Read more</a></div>
+                        <h3><a href="home/resort-overview/{{ $ro4->slug }}">{{ $ro4->title }}</a></h3>
+                        {!! $ro3->excerpt !!}
+                        <div class="links"><a href="home/resort-overview/{{ $ro4->slug }}">Read more</a></div>
                     </div>
                 </div>
 
                 <div class="side-B">
                     <div class="product-thumb txt-rgt">
                         <div class="image">
-                            <a class="arrow-left"><img src="assets/images/category4.png" class="img-responsive" alt="imaga"></a>
+                            <a class="arrow-left"><img src="{{ $ro4->image }}" class="img-responsive" alt="imaga"></a>
                         </div>
                     </div>
                 </div>
@@ -228,48 +228,48 @@
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <div class="blog-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only</p>
+                            {!! $bs1->body !!}
                         </div>
                         <div class="blog-view-box">
                             <div class="media">
                                 <div class="media-left">
-                                    <img src="assets/images/client1.png" class="media-object">
+                                    <img src="{{ $bs1->iamge }}" class="media-object">
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="media-heading blog-title">Walter Hucko</h3>
-                                    <h5 class="blog-rev">Satisfied Customer</h5>
+                                    <h3 class="media-heading blog-title">{{ $bs1->title }}</h3>
+                                    <h5 class="blog-rev">{{ $bs1->excerpt }}</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only</p>
+                            {!! $bs2->body !!}
                         </div>
                         <div class="blog-view-box">
                             <div class="media">
                                 <div class="media-left">
-                                    <img src="assets/images/client2.png" class="media-object">
+                                    <img src="{{ $bs2->iamge }}" class="media-object">
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="media-heading blog-title">Jules Boutin</h3>
-                                    <h5 class="blog-rev">Satisfied Customer</h5>
+                                    <h3 class="media-heading blog-title">{{ $bs2->title }}</h3>
+                                    <h5 class="blog-rev">{{ $bs2->excerpt }}</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only</p>
+                            {!! $bs3->body !!}
                         </div>
                         <div class="blog-view-box">
                             <div class="media">
                                 <div class="media-left">
-                                    <img src="images/client3.png" class="media-object">
+                                    <img src="{{ $bs3->iamge }}" class="media-object">
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="media-heading blog-title">Attilio Marzi</h3>
-                                    <h5 class="blog-rev">Satisfied Customer</h5>
+                                    <h3 class="media-heading blog-title">{{ $bs3->title }}</h3>
+                                    <h5 class="blog-rev">{{ $bs3->excerpt }}</h5>
                                 </div>
                             </div>
                         </div>
@@ -288,16 +288,15 @@
             <div class="view-set-block">
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="event-blog-image">
-                        <img alt="image" class="img-responsive" src="assets/images/blog1.png">
+                        <img alt="image" class="img-responsive" src="{{ $b1->image }}">
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 side-in-image">
                     <div class="event-blog-details">
-                        <h4><a href="single-blog.html">Lorem ipsum dolor sit amet</a></h4>
+                        <h4><a href="">{{ $b1->title }}</a></h4>
                         <h5>Post By Admin <a><i aria-hidden="true" class="fa fa-heart-o fa-lg"></i>Likes</a><a><i aria-hidden="true" class="fa fa-comment-o fa-lg"></i>comments</a></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem nulla, ornare eu felis quis, efficitur posuere nulla. Aliquam ac luctus turpis, non faucibus sem. Fusce ornare turpis neque, eu commodo sapien porta sed. Nam ut ante turpis. Nam arcu odio, scelerisque a vehicula vitae, auctor sit amet lectus. </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem nulla, ornare eu felis quis, efficitur posuere nulla. Aliquam ac luctus turpis, non faucibus sem. Fusce ornard hendrerit tortor vulputate id. Vestibulum mauris nibh, luctus non maximus vitae, porttitor eget neque. Donec tristique nunc facilisis, dapibus libero ac</p>
-                        <a class="btn btn-default" href="single-blog.html">Read More</a>
+                        {!! $b1->excerpt !!}
+                        <a class="btn btn-default" href="#">Read More</a>
                     </div>
                 </div>
             </div>
@@ -311,10 +310,9 @@
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 side-in-image">
                     <div class="event-blog-details">
-                        <h4><a href="single-blog.html">Lorem ipsum dolor sit amet</a></h4>
+                        <h4><a href="single-blog.html">{{ $b2->title }}</a></h4>
                         <h5>Post By Admin <a><i aria-hidden="true" class="fa fa-heart-o fa-lg"></i>Likes</a><a><i aria-hidden="true" class="fa fa-comment-o fa-lg"></i>comments</a></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem nulla, ornare eu felis quis, efficitur posuere nulla. Aliquam ac luctus turpis, non faucibus sem. Fusce ornare turpis neque, eu commodo sapien porta sed. Nam ut ante turpis. Nam arcu odio, scelerisque a vehicula vitae, auctor sit amet lectus. </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem nulla, ornare eu felis quis, efficitur posuere nulla. Aliquam ac luctus turpis, non faucibus sem. Fusce ornard hendrerit tortor vulputate id. Vestibulum mauris nibh, luctus non maximus vitae, porttitor eget neque. Donec tristique nunc facilisis, dapibus libero ac</p>
+                        {!! $b2->excerpt !!}
                         <a class="btn btn-default" href="single-blog.html">Read More</a>
                     </div>
                 </div>

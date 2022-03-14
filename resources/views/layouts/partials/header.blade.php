@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-2 col-sm-6 col-xs-6">
                 <div id="logo">
-                    <!--<a href="index.html"><img src="images/logo.png" alt="logo"></a>-->
+                    <a href="/"><span>vacay</span>home</a>
 
                 </div>
             </div>

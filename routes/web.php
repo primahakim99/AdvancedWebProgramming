@@ -1,10 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Models\Post;
 // use App\Http\Controllers\PageController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,10 +93,12 @@ use App\Http\Controllers\ArticleController;
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Week 3
-Route::get('/', function () {
-    return view ('week_3\home', [
-        "title" => "home"
-    ]);
+Route::prefix('/')->group(function () {
+    Route::get('', [PostController::class, 'index']);
+    Route::get('home/resort-overview/luxury-spa', [PostController::class, 'ro1']);
+    Route::get('home/resort-overview/beatusish-ingl', [PostController::class, 'ro2']);
+    Route::get('home/resort-overview/luxury-room', [PostController::class, 'ro3']);
+    Route::get('home/resort-overview/heaven-seanery', [PostController::class, 'ro4']);
 });
 
 Route::get('/about', function () {
