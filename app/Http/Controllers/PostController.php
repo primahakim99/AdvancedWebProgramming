@@ -19,6 +19,7 @@ class PostController extends Controller
             "bs3" => Post::find(7),
             "b1" => Post::find(8),
             "b2" => Post::find(9),
+            "RO" => Post::where('category', 'resort-overview')->get(),
             "title" => "home"
         ]);
     }
