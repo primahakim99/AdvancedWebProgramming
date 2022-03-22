@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    Public function index(){
-        return ('\nHome');
+    Public function index()
+    {
+        $user = Auth::user();
+        return view('home', ['user' => $user]);
     }
 }
